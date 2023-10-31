@@ -21,7 +21,8 @@ public class PlayerController : MonoBehaviour
         var direction = new Vector3(1 , 0 , 0);
         var moveSpeed = 5;
         var fps       = Time.deltaTime;
-        transform.position += direction * fps * moveSpeed;
+        var movement  = direction * fps * moveSpeed;
+        transform.position += movement;
     }
 
 #endregion
