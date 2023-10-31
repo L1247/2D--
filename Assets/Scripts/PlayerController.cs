@@ -18,6 +18,10 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         Debug.Log("Update");
+        var direction = new Vector3(1 , 0 , 0);
+        var moveSpeed = 5;
+        var fps       = Time.deltaTime;
+        transform.position += direction * fps * moveSpeed;
     }
 
 #endregion
