@@ -19,11 +19,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var horizontal = Input.GetAxis("Horizontal");
+        var horizontal = Input.GetAxisRaw("Horizontal");
         var movementX  = horizontal * moveSpeed;
-        // print(horizontal);
         print(movementX);
-        rigidbody2D.velocity = new Vector2(movementX , rigidbody2D.velocity.y);
+        var newVelocity = new Vector2(movementX , rigidbody2D.velocity.y);
+        rigidbody2D.velocity = newVelocity;
     }
 
 #endregion
