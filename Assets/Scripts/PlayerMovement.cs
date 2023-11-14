@@ -1,4 +1,8 @@
+#region
+
 using UnityEngine;
+
+#endregion
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rigidbody2D.velocity = new Vector2(1 , 0);
+        rigidbody2D.velocity = new Vector2(1 , rigidbody2D.velocity.y);
     }
 
 #endregion
