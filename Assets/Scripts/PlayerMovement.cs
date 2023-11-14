@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
 {
 #region Public Variables
 
+    public int moveSpeed;
+
     public Rigidbody2D rigidbody2D;
 
 #endregion
@@ -17,7 +19,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rigidbody2D.velocity = new Vector2(1 , rigidbody2D.velocity.y);
+        var horizontal = Input.GetAxis("Horizontal");
+        var movementX  = horizontal * moveSpeed;
+        // print(horizontal);
+        print(movementX);
+        rigidbody2D.velocity = new Vector2(movementX , rigidbody2D.velocity.y);
     }
 
 #endregion
