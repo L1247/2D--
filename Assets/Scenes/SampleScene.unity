@@ -354,10 +354,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2034473731}
-  - component: {fileID: 2034473730}
   - component: {fileID: 2034473732}
   - component: {fileID: 2034473733}
   - component: {fileID: 2034473734}
+  - component: {fileID: 2034473735}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -365,18 +365,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2034473730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034473729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2ad57facbc3acf41a2656ea1c5fe76a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2034473731
 Transform:
   m_ObjectHideFlags: 0
@@ -516,6 +504,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2034473735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034473729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e682f4908cc38504db69ca3daf028296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody2D: {fileID: 2034473733}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
