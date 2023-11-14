@@ -31,8 +31,7 @@ public class PlayerMovement : MonoBehaviour
         if (jumpKeyDown)
         {
             print("空白鍵按下");
-            var y = 100 * jumpY;
-
+            var y         = 100 * jumpY;
             var jumpForce = new Vector2(0 , y);
             rigidbody2D.AddForce(jumpForce);
         }
