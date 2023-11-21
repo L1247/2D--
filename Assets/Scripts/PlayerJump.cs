@@ -58,6 +58,7 @@ public class PlayerJump : MonoBehaviour
     {
         print(col.gameObject);
 
+        // 如果角色碰到地板，重製跳躍次數
         var isFloor            = col.gameObject.name == "Floor";
         if (isFloor) jumpCount = 0;
     }
