@@ -8,8 +8,6 @@ public class PlayerMovement : MonoBehaviour
 {
 #region Public Variables
 
-    public float jumpY;
-
     public int moveSpeed;
 
     public Rigidbody2D rigidbody2D;
@@ -26,17 +24,6 @@ public class PlayerMovement : MonoBehaviour
         // print(movementX);
         var newVelocity = new Vector2(movementX , rigidbody2D.velocity.y);
         rigidbody2D.velocity = newVelocity;
-
-        var jumpKeyDown = Input.GetKeyDown(KeyCode.Space);
-        if (jumpKeyDown)
-        {
-            print("空白鍵按下");
-            // reset velocity's y
-            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x , 0);
-            var y         = 100 * jumpY;
-            var jumpForce = new Vector2(0 , y);
-            rigidbody2D.AddForce(jumpForce);
-        }
     }
 
 #endregion
