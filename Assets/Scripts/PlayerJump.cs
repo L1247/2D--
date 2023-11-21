@@ -52,6 +52,19 @@ public class PlayerJump : MonoBehaviour
 
 #endregion
 
+#region Public Methods
+
+    /// <summary>
+    ///     開啟兩段跳
+    /// </summary>
+    [ContextMenu("EnableDoubleJump")]
+    public void EnableDoubleJump()
+    {
+        maxJumpCount = 2;
+    }
+
+#endregion
+
 #region Private Methods
 
     private void OnCollisionEnter2D(Collision2D col)
