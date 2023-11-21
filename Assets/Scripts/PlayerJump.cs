@@ -51,4 +51,16 @@ public class PlayerJump : MonoBehaviour
     }
 
 #endregion
+
+#region Private Methods
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        print(col.gameObject);
+
+        var isFloor            = col.gameObject.name == "Floor";
+        if (isFloor) jumpCount = 0;
+    }
+
+#endregion
 }
