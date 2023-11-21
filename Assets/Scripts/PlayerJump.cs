@@ -42,6 +42,8 @@ public class PlayerJump : MonoBehaviour
 
             // reset velocity's y
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x , 0);
+
+            // add jump force
             var y         = 100 * jumpY;
             var jumpForce = new Vector2(0 , y);
             rigidbody2D.AddForce(jumpForce);
