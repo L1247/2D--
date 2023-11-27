@@ -799,7 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc816980aa9487d42aab0104d96ee657, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpY: 7.5
+  jumpPower: 7.5
   jumpCount: 0
   maxJumpCount: 1
   rigidbody2D: {fileID: 2034473733}

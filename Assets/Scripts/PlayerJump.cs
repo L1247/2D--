@@ -8,7 +8,10 @@ public class PlayerJump : MonoBehaviour
 {
 #region Public Variables
 
-    public float jumpY;
+    /// <summary>
+    ///     跳躍力道
+    /// </summary>
+    public float jumpPower;
 
     /// <summary>
     ///     目前跳躍次數
@@ -40,12 +43,12 @@ public class PlayerJump : MonoBehaviour
             // jumpCount += 1;
             // jumpCount ++;
 
-            // reset velocity's y
+            // reset velocity's y , 避免被落下的重力影響，每次跳躍前先重設Y軸力道
             rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x , 0);
 
-            // add jump force
-            var y         = 100 * jumpY;
-            var jumpForce = new Vector2(0 , y);
+            // add jump force，對物理元件施一個往上的力道
+            var forceY    = 100 * jumpPower;
+            var jumpForce = new Vector2(0 , forceY);
             rigidbody2D.AddForce(jumpForce);
         }
     }
@@ -70,7 +73,6 @@ public class PlayerJump : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D col)
     {
         print(col.gameObject);
-
         // 如果角色碰到地板，重製跳躍次數
         var isFloor            = col.gameObject.name == "Floor";
         if (isFloor) jumpCount = 0;
