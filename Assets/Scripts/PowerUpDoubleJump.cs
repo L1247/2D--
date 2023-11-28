@@ -17,6 +17,8 @@ public class PowerUpDoubleJump : MonoBehaviour
         {
             var playerJump = col.GetComponent<PlayerJump>();
             playerJump.EnableDoubleJump();
+            // 關閉我自己
+            gameObject.SetActive(false);
         }
     }
 
