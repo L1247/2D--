@@ -22,7 +22,10 @@ public class Dialog : MonoBehaviour
     }
 
     // Update is called once per frame
-    private void Update() { }
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0)) dialogText.text = "新句子";
+    }
 
 #endregion
 }
