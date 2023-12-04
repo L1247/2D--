@@ -904,11 +904,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - sentence1
-  - sentence2
+  - <color=green>green</color> sentence2
   - sentence3
   - sentence4
   - sentence5
-  text: 12314512
   dialog: {fileID: 621108524}
   everyCharacterDelay: 0.1
   continueImage: {fileID: 554261845}
