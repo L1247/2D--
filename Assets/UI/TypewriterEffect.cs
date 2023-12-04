@@ -15,8 +15,6 @@ namespace UI
 
         public List<string> sentences;
 
-        public string text;
-
     #endregion
 
     #region Private Variables
@@ -77,7 +75,8 @@ namespace UI
             time += Time.deltaTime;
             if (time >= everyCharacterDelay)
             {
-                dialog.text += sentence[wordIndex].ToString();
+                var letter = sentence[wordIndex];
+                dialog.text += letter;
                 wordIndex   += 1;
                 time        =  0;
             }
