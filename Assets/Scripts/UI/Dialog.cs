@@ -1,5 +1,6 @@
 #region
 
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -8,6 +9,8 @@ using UnityEngine;
 public class Dialog : MonoBehaviour
 {
 #region Public Variables
+
+    public List<string> sentences;
 
     public TMP_Text dialogText;
 
@@ -18,7 +21,7 @@ public class Dialog : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        dialogText.text = "中文測試";
+        dialogText.text = sentences[0];
     }
 
     // Update is called once per frame
