@@ -1,5 +1,6 @@
 #region
 
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -27,8 +28,12 @@ public class Dialog : MonoBehaviour
     private void Start()
     {
         // 設定文字為陣列第一句
-        dialogText.text =  sentences[sentenceIndex];
-        sentenceIndex   += 1; // index + 1
+        // dialogText.text =  sentences[sentenceIndex];
+        // 句子
+        var line = sentences[sentenceIndex];
+        // 協程
+        StartCoroutine(DoTypeWriteEffect(line));
+        sentenceIndex += 1; // index + 1
     }
 
     // Update is called once per frame
@@ -43,6 +48,27 @@ public class Dialog : MonoBehaviour
         {
             dialogText.text =  sentences[sentenceIndex];
             sentenceIndex   += 1; // index + 1
+        }
+    }
+
+#endregion
+
+#region Private Methods
+
+    /// <summary>
+    ///     執行打字機效果
+    /// </summary>
+    /// <param name="line"></param>
+    /// <returns></returns>
+    private IEnumerator DoTypeWriteEffect(string line)
+    {
+        foreach (var c in line)
+        {
+            var letter = c.ToString();
+            print(letter);
+            dialogText.text += letter;
+            // 延遲0.1秒執行一次
+            yield return new WaitForSeconds(0.1f);
         }
     }
 
