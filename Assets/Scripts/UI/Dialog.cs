@@ -46,8 +46,12 @@ public class Dialog : MonoBehaviour
         // 左鍵按下
         if (Input.GetMouseButtonDown(0))
         {
-            dialogText.text =  sentences[sentenceIndex];
-            sentenceIndex   += 1; // index + 1
+            // dialogText.text =  sentences[sentenceIndex];
+            // 句子
+            var line = sentences[sentenceIndex];
+            // 協程
+            StartCoroutine(DoTypeWriteEffect(line));
+            sentenceIndex += 1; // index + 1
         }
     }
 
@@ -62,6 +66,8 @@ public class Dialog : MonoBehaviour
     /// <returns></returns>
     private IEnumerator DoTypeWriteEffect(string line)
     {
+        // 清空文字框
+        dialogText.text = "";
         foreach (var c in line)
         {
             var letter = c.ToString();
