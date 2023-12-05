@@ -34,6 +34,9 @@ public class Dialog : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        // index:3 , count: 3 
+        if (sentenceIndex >= sentences.Count) return;
+
         // 左鍵按下
         if (Input.GetMouseButtonDown(0))
         {
