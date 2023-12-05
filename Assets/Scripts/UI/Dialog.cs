@@ -35,6 +35,7 @@ public class Dialog : MonoBehaviour
     private void Update()
     {
         // index:3 , count: 3 
+        // 所有句子播放完畢後，不繼續執行
         if (sentenceIndex >= sentences.Count) return;
 
         // 左鍵按下
