@@ -809,9 +809,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogText: {fileID: 140165277}
   sentences:
-  - "\u7B2C\u4E00\u53E5"
-  - "\u7B2C\u4E8C\u53E5"
-  - "\u7B2C\u4E09\u53E5"
+  - "\u7B2C\u4E00\u53E5\u8A71"
+  - "\u7B2C\u4E8C\u53E5\u8A71"
+  - "\u7B2C\u4E09\u53E5\u8A71"
 --- !u!1 &1403438411
 GameObject:
   m_ObjectHideFlags: 0
