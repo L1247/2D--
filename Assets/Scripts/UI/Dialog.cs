@@ -31,11 +31,6 @@ public class Dialog : MonoBehaviour
     {
         // 設定文字為陣列第一句
         // dialogText.text =  sentences[sentenceIndex];
-        // 句子
-        var line = sentences[sentenceIndex];
-        // 協程
-        StartCoroutine(DoTypeWriteEffect(line));
-        sentenceIndex += 1; // index + 1
     }
 
     // Update is called once per frame
@@ -55,6 +50,20 @@ public class Dialog : MonoBehaviour
             StartCoroutine(DoTypeWriteEffect(line));
             sentenceIndex += 1; // index + 1
         }
+    }
+
+#endregion
+
+#region Public Methods
+
+    [ContextMenu("ShowSentences")]
+    public void ShowSentences()
+    {
+        // 句子
+        var line = sentences[sentenceIndex];
+        // 協程
+        StartCoroutine(DoTypeWriteEffect(line));
+        sentenceIndex += 1; // index + 1
     }
 
 #endregion
