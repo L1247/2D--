@@ -11,6 +11,8 @@ public class Dialog : MonoBehaviour
 {
 #region Public Variables
 
+    public float typeWriteSpeed = 0.1f;
+
     /// <summary>
     ///     句子的索引，紀錄目前在陣列第幾個元素
     /// </summary>
@@ -74,7 +76,7 @@ public class Dialog : MonoBehaviour
             print(letter);
             dialogText.text += letter;
             // 延遲0.1秒執行一次
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(typeWriteSpeed);
         }
     }
 

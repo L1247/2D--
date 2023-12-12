@@ -807,6 +807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71b22f1182fb8b64ab18975944f07050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typeWriteSpeed: 0.05
   sentenceIndex: 0
   sentences:
   - "\u7B2C\u4E00\u53E5\u8A71\u7B2C\u4E00\u53E5\u8A71\u7B2C\u4E00\u53E5\u8A71\u7B2C\u4E00\u53E5\u8A71\u7B2C\u4E00\u53E5\u8A71\u7B2C\u4E00\u53E5\u8A71"
