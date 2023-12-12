@@ -11,6 +11,8 @@ public class Dialog : MonoBehaviour
 {
 #region Public Variables
 
+    public bool effectTyping; // 正在執行效果
+
     public float typeWriteSpeed = 0.1f;
 
     /// <summary>
@@ -40,8 +42,9 @@ public class Dialog : MonoBehaviour
         // 所有句子播放完畢後，不繼續執行
         if (sentenceIndex >= sentences.Count) return;
 
+        if (effectTyping) return; // 如果效果執行中，就不執行
         // 左鍵按下
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) /*&& effectTyping == false*/)
         {
             // dialogText.text =  sentences[sentenceIndex];
             // 句子
@@ -77,6 +80,7 @@ public class Dialog : MonoBehaviour
     /// <returns></returns>
     private IEnumerator DoTypeWriteEffect(string line)
     {
+        effectTyping = true;
         // 清空文字框
         dialogText.text = "";
         foreach (var c in line)
@@ -87,6 +91,9 @@ public class Dialog : MonoBehaviour
             // 延遲0.1秒執行一次
             yield return new WaitForSeconds(typeWriteSpeed);
         }
+
+        // 執行完畢
+        effectTyping = false;
     }
 
 #endregion
