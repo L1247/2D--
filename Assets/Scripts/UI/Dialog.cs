@@ -13,7 +13,7 @@ public class Dialog : MonoBehaviour
 
     public bool effectTyping; // 正在執行效果
 
-    public float typeWriteSpeed = 0.1f;
+    public float letterWaitTime = 0.1f; // 每個字等待的時間
 
     /// <summary>
     ///     句子的索引，紀錄目前在陣列第幾個元素
@@ -89,7 +89,7 @@ public class Dialog : MonoBehaviour
             print(letter);
             dialogText.text += letter;
             // 延遲0.1秒執行一次
-            yield return new WaitForSeconds(typeWriteSpeed);
+            yield return new WaitForSeconds(letterWaitTime);
         }
 
         // 執行完畢
