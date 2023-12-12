@@ -33,6 +33,7 @@ public class Dialog : MonoBehaviour
     {
         // 設定文字為陣列第一句
         // dialogText.text =  sentences[sentenceIndex];
+        gameObject.SetActive(false); // 關閉物件顯示
     }
 
     // Update is called once per frame
@@ -43,6 +44,7 @@ public class Dialog : MonoBehaviour
         if (sentenceIndex >= sentences.Count) return;
 
         if (effectTyping) return; // 如果效果執行中，就不執行
+
         // 左鍵按下
         if (Input.GetMouseButtonDown(0) /*&& effectTyping == false*/)
         {
